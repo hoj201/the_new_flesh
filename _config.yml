@@ -13,12 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
+title: The New Flesh
+email: hoj201@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+    our reality is already half video hallucination. If you're not careful, it will become total hallucination. You'll have to learn to live in a very strange new world... I had a brain tumour and I had visions. I believe the visions cause the tumour and not the reverse. I can feel the visions coalsce and become flesh. Uncontrollable flesh. But when they removed the tumour, it was called Videodrome. I was the-- I... I... was... Videodrome's... first victim...
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb

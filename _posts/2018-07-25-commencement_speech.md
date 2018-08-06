@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "A very bad commencement speech"
+author: Henry Jacobs
 date:   2018-07-25 20:58:07 -0400
 categories: society
 ---

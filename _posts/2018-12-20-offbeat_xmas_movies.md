@@ -6,24 +6,20 @@ date:   2018-12-20 20:58:07 -0400
 categories: society, movies
 ---
 
-I grew up sort of Jewish.  None the less, Christmas was not foreign.  When I was in pre-school I remember being told that an obese man is watching at the playground, and then continues to do so while we are asleep in our beds at night. Moreover, this mysterious man would be entering our homes in the middle of the night in a matter of days.  At age four this seemed plausible, and I looked forward to it because I was also told he was nice and handed out candy and gifts.
+These are **not** my favorite Christmas movies.  They are my favorite movie recommendations. The distinction manifests in the fact that "It's a Wonderful Life", a very good movie, is not on the list. I get virtually no joy from recommending "It's a Wonderful Life" because people are going to watch it anyway. It plays in an infinite loop on TV during this time of year and provides us all with reasonable cover to avoid awkward conversation at family gatherings. In contrast I get a lot of pleasure from recommending the \# 3 movie on this list, and that movie is terrible.
 
-Christmas has always been a bizarre holiday, but one I've generally enjoyed from afar (perhaps because of its surreality). Now that I am raising a child, we actual do a portion of Christmas thing: killing a tree and dragging it into our living room, hanging up the oversized socks, lying to our child.  We only do the things that make sense to us.
-
-My family is listening to the i-Tunes Christmas pop-list on repeat, and so I felt the compelled to record my top five Christmas movie recommendations.  Just to make this clear, these are **not** my favorite Christmas movies.  They are just my favorite movies to recommend. The distinction manifests in the fact that "It's a Wonderful Life" is not on the list.  "It's a Wonderful Life" is a better Christmas movie than some of the movies on this list, but I get virtually no joy from recommending it because many people are going to watch it anyway during Christmas just by getting bored at an awkward family gathering and turning on TCM.
-
-Without further ado, my top five Christmas recommendations, in descending order.
+Without further ado, in descending order...
 
 ## \# 5: Batman Returns
-It is always a cold dark night in Gotham city with snow drifting down majestically from a overcast sky. However, this night is special, because they are lighing the Christmas tree. Repeated failed attempts to light Gotham's Christmas tree in their version of Rockeller Center provide "Batman Returns" with its main through-lines.  It's somewhat of a frustrating movie.
+It is always a cold, dark night in Gotham city with snow drifting down majestically from a overcast sky. However, this night is special, because they are lighting the Christmas tree. Repeated failed attempts to light Gotham's Christmas tree in their version of Rockefeller Center provide "Batman Returns" with its main through-lines.  It's somewhat of a frustrating movie.
 
 <img src="{{ "/assets/images/offbeat_xmas/the_penguin.jpg" | absolute_url }}" width="100%">
 
-The "villains" of Batman Returns are the penguin and cat women. Oswald Cobblepot is abandoned by his parents at night, dumped into the sewer and floated down the river in a basket like baby Moses. There are actually numerous biblical reference related to Penguin in this sort-of-a-Christmas-movie, which I'm not really qualified to elaborate on because I grew up sort of Jewish and never read the bible seriously. In any case, the cradle hits a concrete barrier and the Oswald is adopted by penguins who themselves were abandoned by a defunct zoo. In case you didn't know, Oswald cobblepot is **the** penguin. The theme of villainy as a product of societal dysfunction is strong in "Batman Returns", and the other villain, catwomen, builds further upon it.
+The "villains" of Batman Returns are the Penguin and Catwoman. Oswald Cobblepot is abandoned by his parents at night, dumped into the sewer, and floated down the river in a basket like baby Moses. There are actually numerous biblical reference related to Penguin in this sort-of-a-Christmas-movie, which I'm not really qualified to elaborate on because I grew up sort of Jewish and never read the Bible seriously. In any case, the cradle hits a concrete barrier and Oswald is adopted by penguins who themselves were abandoned by a defunct zoo. In case you didn't know, Oswald Cobblepot is **the** Penguin. The theme of villainy as a product of societal dysfunction is strong in "Batman Returns", and the other villain, Catwoman, builds further upon it.
 
 <img src="{{ "/assets/images/offbeat_xmas/batman_returns.jpg" | absolute_url }}" width="100%">
 
-The origin of catwomen provides an otherwise cartoonish villain with enough depth that you end up rooting for her.  In fact, I think most of the audience is rooting for Catwomen, not Batman. Selina Kyle (Michelle Pfiefer) is a mild-mannered secretary perpetually disrespected by her employer, Max Wren (Christopher Walken). Wren is obviously the real villain of the film, a robber barren of public works building a trust fund for his spoiled jock of a son.  He is the only character who chooses villainy with a cool head (the Penguin and Catwomen are clinically insane).  After Selina accidentally blackmails Wren, he pushes her out a window in hopes of killing her.  Unbeknownst to Wren, she survives the fall. She has nine lives, and this first rebirth is the origin of Catwomen. The fall represents her descent into madness and her rebirth is a cinematic depiction of the *\#MeToo* movement, at least its darker and wilder side. Crazed and angry, but can you blame her? That's by far my favorite scene of the movie, and I'd rather not ruin that scene for anybody who's not seen "Batman Returns" by linking to a clip.  However, just for a taste, here's the scene which precedes it
+The origin of Catwoman provides an otherwise cartoonish villain with enough depth that you end up rooting for her.  In fact, I think most of the audience is rooting for Catwoman, not Batman. Selina Kyle (Michelle Pfiefer) is a mild-mannered secretary perpetually disrespected by her employer, Max Wren (Christopher Walken). Wren is obviously the real villain of the film, a robber barren of public works building a trust fund for his spoiled jock of a son.  He is the only character who chooses villainy with a cool head (the Penguin and Catwoman are clinically insane).  After Selina accidentally blackmails Wren, he pushes her out a window in hopes of killing her.  Unbeknownst to Wren, she survives the fall. She has nine lives, and this first rebirth is the origin of Catwoman. The fall represents her descent into madness and her rebirth is a cinematic depiction of the *\#MeToo* movement, at least its darker and wilder side. Crazed and angry, but can you blame her? That's by far my favorite scene of the movie, and I'd rather not ruin that scene for anybody who's not seen "Batman Returns" by linking to a clip.  However, just for a taste, here's the scene which precedes it
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UqStvc107-M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -32,7 +28,7 @@ The origin of catwomen provides an otherwise cartoonish villain with enough dept
 
 A sci-fi about a retro-futuristic dystopia with Christmas and conga music. There is only one word for such a concoction: *Gilliamesque*.
 
-<img src="{{ "/assets/images/offbeat_xmas/brazil.jpg" | absolute_url }}" width="100%">
+<img src="{{ "/assets/images/offbeat_xmas/Brazil.jpg" | absolute_url }}" width="100%">
 
 
 Like Gilliam himself, the film has a lot to say, and although much of it is style over substance, it is some style!
@@ -52,10 +48,10 @@ Then Robert De Niro (a plumber) gets literally eaten by paperwork. Don't worry e
 
 
 ## \# 3: Toys
-Many people consider this to be a bad movie. I don't, because if I enjoyed watching it and so I personally find that it meets the primary criteria for getting my seal of approval. However, I can sympathize with the hate. "Toys" was made just after "Hook", near the peak of the Robin Williams 90s mania, and he is peak obnoxious in this Barry Levinson film. There are other issues:
+Many people consider this to be a bad movie. I don't, because I enjoyed watching it and so I personally find that it meets the primary criteria for getting my seal of approval. However, I can sympathize with the hate. "Toys" was made just after "Hook", near the peak of the Robin Williams 90s mania, and he is peak obnoxious in this Barry Levinson film. There are other issues:
 
  - The love interest is shallow
- - for some reason genes are like not a thing, how is LL Cool J playing the son of a white guy with a British accent?
+ - For some reason, genes are like not a thing. How is LL Cool J playing the son of a white guy with a British accent?
  - While we're on this side-track, how is it possible to have a family where a single member has a British accent?
 
 Okay fine, maybe it is a bad movie.  However, I enjoyed watching it (this listicle is really making me question my taste). Good/bad aside.  This movie is a visual feast, and unlike my recommendations so far, this movie is an actual bonafide Christmas movie. The movie begins and ends with a Christmas celebration, and the movie is an ode to a child-like approach to adulthood.  **Warning:** *do not take this movie seriously.  You will be punished.*
@@ -73,13 +69,13 @@ The general is now faced with the challenge of running a business in an industry
 
 I apologize for the conventionality of this, but, I feel bad about that last one.  I enjoyed "Toys", but the odds are that most readers will not.  Let me emphasize that: **DO NOT WATCH TOYS**. "A Christmas Story", like "Toys", is also actual bonafide Christmas movie. I thought everybody had seen this. However, after talking to some co-workers, it seems that the younguns don't know this movie, so it made the cut.
 
-**Premise:** The year is 1954, or 1947, or whatever, and it's winter in Indiana where 9 year old boy named Ralfi tries to convince his parents to get him a bb gun for Christmas.  His parents don't want to get him the gun because "he'll shoot his eye out".  That's the conflict and the movie is roughly 90 minutes.  There is obviously no way I can sell this movie based on plot, so I'll just quickly list a random sequence of things that appear in this movie
+**Premise:** The year is 1954, or 1947, or whatever, and it's winter in Indiana where 9 year old Ralfi tries to convince his parents to get him a bb gun for Christmas.  His parents don't want to get him the gun because "he'll shoot his eye out".  That's the conflict and the movie is roughly 90 minutes.  There is obviously no way I can sell this movie based on plot, so I'll just quickly list a random sequence of things that appear in this movie
 
 - triple dog dares
 - Chinese food
 - the ugliest lamp in the world
 - bunny suit pajamas
-- Santa's boot in Ralfis face
+- Santa's boot in Ralfi's face
 
 For that last item, here is a clip.
 
@@ -95,4 +91,4 @@ This string of episodes deals with loneliness, ambition, and death in a very ori
 
 
 ### Footnotes
-[^louie]: Do not misconstrue enjoying an artists work with condoning his/her actions in the world.
+[^louie]: Do not misconstrue enjoying an artist's work with condoning his/her actions in the world.

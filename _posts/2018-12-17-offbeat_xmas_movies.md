@@ -6,7 +6,7 @@ date:   2018-12-17
 categories: society, movies
 ---
 
-These are **not** my favorite Christmas movies.  They are my favorite movie recommendations. The distinction manifests in the fact that "It's a Wonderful Life", a very good movie, is not on the list. I get virtually no joy from recommending "It's a Wonderful Life" because people are going to watch it anyway. It plays in an infinite loop on TV during this time of year and provides us all with reasonable cover to avoid awkward conversation at family gatherings. In contrast I get a lot of pleasure from recommending the \# 3 movie on this list, and that movie is terrible.
+These are **not** my favorite Christmas movies.  They are my favorite movie recommendations. The distinction manifests in the fact that "It's a Wonderful Life", a very good movie, is not on the list. I get virtually no joy from recommending "It's a Wonderful Life" because people are going to watch it anyway. It plays in an infinite loop on TV during this time of year and provides us all with reasonable cover to avoid awkward conversation at family gatherings. In contrast, I get a lot of pleasure from recommending the third movie on this list, and that movie is terrible.
 
 Without further ado, in descending order...
 

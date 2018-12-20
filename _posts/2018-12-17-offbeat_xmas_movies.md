@@ -86,7 +86,7 @@ Technically this is not a movie, but it's a feature-length stretch of video whic
 
 <img src="{{ "/assets/images/offbeat_xmas/louie_xmas.jpg" | absolute_url }}" width="100%">
 
-This string of episodes deals with loneliness, ambition, and death in a very original and modern way.  If you're somebody who obsesses over these things than please watch these episodes. It's my \#1 pick for a reason.
+This string of episodes deals with loneliness, ambition, and death in a very original and modern way.  If you're somebody who obsesses over these things then please watch these episodes. It's my \#1 pick for a reason.
 
 
 

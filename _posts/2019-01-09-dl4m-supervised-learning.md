@@ -124,12 +124,12 @@ whose marginals are $$\rho_X$$ and $$\rho_Y$$ respectively.
 We'll call this category $$\operatorname{ProbRel}$$.
 
 Just as there is a functor which embeds $$\operatorname{Set}$$ into
-$$\operatorname{Rel}$$, there is a functor, $$F$,
+$$\operatorname{Rel}$$, there is a functor, $$F$$,
  which embeds $$\operatorname{Prob}$$ into $$\operatorname{ProbRel}$:
 
  - for an object $$\rho$$ in $$\operatorname{Prob}$$, $$F(\rho) := \rho$$.
- - for an arrow $$f: \rho_X \to \rho_Y$$ in $$\operatorname{Prob}$$, $$F(f)$$
- is the join distribution on $$\Sigma_X \otimes \Sigma_Y$$
+ - for an arrow $$f: \rho_X \to \rho_Y$$ in the category $$\operatorname{Prob}$$, $$F(f)$$
+ is the joint distribution on $$\Sigma_X \otimes \Sigma_Y$$
  given by $$F(f)(E_x,E_y) = f(E_y \mid E_x) \rho_X(E_x)$$
 
 Something to note: $$F$$ is invertible!
@@ -140,7 +140,7 @@ sampled from an (unknown) joint distribution
 $$\rho \in \Pr(\Sigma_X \otimes \Sigma_Y)$$.
 In other words, given samples from a probabilistic relation, $$\rho$$, we'd like
 to find a probabilistic function $$f$$ such that $$F[f] = \rho$$.
-The upshot here is that $$F$$ is invertible.
+Thank god $$F$$ is invertible.
 
 <!--## Bayesian supervised machine learning
 Just to re-iterate, we posit the existence of a probability distribution, $$\rho$$

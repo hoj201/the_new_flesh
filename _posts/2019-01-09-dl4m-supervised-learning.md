@@ -125,7 +125,7 @@ We'll call this category $$\operatorname{ProbRel}$$.
 
 Just as there is a functor which embeds $$\operatorname{Set}$$ into
 $$\operatorname{Rel}$$, there is a functor, $$F$$,
- which embeds $$\operatorname{Prob}$$ into $$\operatorname{ProbRel}$:
+ which embeds $$\operatorname{Prob}$$ into $$\operatorname{ProbRel}$$:
 
  - for an object $$\rho$$ in $$\operatorname{Prob}$$, $$F(\rho) := \rho$$.
  - for an arrow $$f: \rho_X \to \rho_Y$$ in the category $$\operatorname{Prob}$$, $$F(f)$$

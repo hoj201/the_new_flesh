@@ -32,10 +32,10 @@ Perhaps our perception of reality is but a shadow of truth.
 The notion of a shadow is mathematically represented as a map projecting
 the platonic forms into a space of observables.
 If reality were a sequence of statistically independent events
-then the model for such a reality could be easily mathmatized.
+then the model for such a reality could be easily mathematized.
 Our senses could be represented by a collection of random variables
 $$X_i: \Sigma \to \Sigma_i$$ for $$i=1,\dots,5$$.
-All of data-science in concerned with studying
+All of data-science is concerned with studying
 models based on finite collections of samples in this model of Plato's cave.
 For example, what is the relationship (if any) between senses
 $$X$$ and $$Y$$.
@@ -74,14 +74,21 @@ probabilistic function (a posterior)
 using a dataset sampled from a probabilistic relation
 (a joint distribution)**.
 
+I'll explain what these probabilistic functions and relations are next.
+
 ## The probabilistic category
+Let's start by setting up some notation.  If $$\Sigma$$ is a $$\sigma$$-algebra,
+we let $$\Pr(\Sigma)$$ denote the set of probability distributions over $$\Sigma$$.
+
 We could define a probabilistic category
 where the objects are probability distributions and the arrows
-are posterior distributions.
-
-A conditional probability distribution $$f(y \mid x)$$
-can be viewed as a map from $$\rho_X \in \Pr(\Sigma_X)$$
-to the distribution
+are conditional distributions. A conditional distribution is usually written with
+two arguments like $$f(E_Y \mid E_X)$$, but it's only a probability distribution over
+the first argument, $$E_Y$$. We can curry this function and viewed $$f$$,
+as a map, $$f: \Sigma_X \to \Pr(\Sigma_Y)$$.
+For a specific $$\rho_X \in \Pr(\Sigma_X)$$,
+the conditional distribution, $$f$$, can be viewed as an arrow from
+$$\rho_X \in \Pr(\Sigma_X)$$ to the distribution
 
 $$
 \begin{align}
@@ -98,24 +105,43 @@ $$
 \end{align}
 $$
 
-This defines the category, $$\operatorname{Prob}$$ which
-we will think of as a probabilistic version of the category of set.[^prel]
+This defines the category, $$\operatorname{Prob}$$ where
+ - the objects are probability distributions,
+ - the arrows are conditional probability distributions,
+ - and the composition is given by the law of total probability.
+
+We will think of $$\operatorname{Prob}$$ as a probabilistic version of
+$$\operatorname{Set}$$.[^prel]
 
 [^prel]:The category $$\operatorname{Prob}$$ is related to the category of probabilistic relations. If your a fan of categorical approaches to mathematics, I recommend [this article](https://arxiv.org/abs/1205.1488). You might also enjoy my blog-series on the topic: [part I](https://www.thenewflesh.net/2018/01/21/probability.html), [part II](https://www.thenewflesh.net/2018/01/27/probability_p2.html), and [part III](https://www.thenewflesh.net/2018/02/12/probability_p3.html)
 
 ## Relations in the probabilistic category
-There is a probabilistic analog to a relation between sets,
-which is constructed by looking at the category, $$\operatorname{span}(\operatorname{Prob})$$.
+There is a probabilistic analog to $$\operatorname{Rel}$$,
+which is constructed by taking the pull-backs of all elements in, $$\operatorname{span}(\operatorname{Prob})$$.
 A stochastic relation from $$\rho_X \in \Pr(\Sigma_X)$$
 to $$\rho_Y \in \Pr(\Sigma_Y)$$ is an element
 $$\rho \in \Pr(\Sigma_X \otimes \Sigma_Y)$$
 whose marginals are $$\rho_X$$ and $$\rho_Y$$ respectively.
+We'll call this category $$\operatorname{ProbRel}$$.
+
+Just as there is a functor which embeds $$\operatorname{Set}$$ into
+$$\operatorname{Rel}$$, there is a functor, $$F$,
+ which embeds $$\operatorname{Prob}$$ into $$\operatorname{ProbRel}$:
+
+ - for an object $$\rho$$ in $$\operatorname{Prob}$$, $$F(\rho) := \rho$$.
+ - for an arrow $$f: \rho_X \to \rho_Y$$ in $$\operatorname{Prob}$$, $$F(f)$$
+ is the join distribution on $$\Sigma_X \otimes \Sigma_Y$$
+ given by $$F(f)(E_x,E_y) = f(E_y \mid E_x) \rho_X(E_x)$$
+
+Something to note: $$F$$ is invertible!
 
 The goal of bayesian supervised machine is to associate a posterior
 distribution to a labeled dataset, $$\mathcal{D} = \{ (x_i,y_i) \}_{i=1}^{N}$$,
 sampled from an (unknown) joint distribution
 $$\rho \in \Pr(\Sigma_X \otimes \Sigma_Y)$$.
-The upshot here is that every joint distribution induces a posterior distribution.
+In other words, given samples from a probabilistic relation, $$\rho$$, we'd like
+to find a probabilistic function $$f$$ such that $$F[f] = \rho$$.
+The upshot here is that $$F$$ is invertible.
 
 <!--## Bayesian supervised machine learning
 Just to re-iterate, we posit the existence of a probability distribution, $$\rho$$

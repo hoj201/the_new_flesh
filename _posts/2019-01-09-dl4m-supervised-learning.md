@@ -116,8 +116,7 @@ $$\operatorname{Set}$$.[^prel]
 [^prel]:The category $$\operatorname{Prob}$$ is related to the category of probabilistic relations. If your a fan of categorical approaches to mathematics, I recommend [this article](https://arxiv.org/abs/1205.1488). You might also enjoy my blog-series on the topic: [part I](https://www.thenewflesh.net/2018/01/21/probability.html), [part II](https://www.thenewflesh.net/2018/01/27/probability_p2.html), and [part III](https://www.thenewflesh.net/2018/02/12/probability_p3.html)
 
 ## Relations in the probabilistic category
-There is a probabilistic analog to $$\operatorname{Rel}$$,
-which is constructed by taking the pull-backs of all elements in, $$\operatorname{span}(\operatorname{Prob})$$.
+There is a probabilistic analog to $$\operatorname{Rel}$$.
 A stochastic relation from $$\rho_X \in \Pr(\Sigma_X)$$
 to $$\rho_Y \in \Pr(\Sigma_Y)$$ is an element
 $$\rho \in \Pr(\Sigma_X \otimes \Sigma_Y)$$

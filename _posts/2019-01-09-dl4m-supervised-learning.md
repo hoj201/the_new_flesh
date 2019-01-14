@@ -18,7 +18,8 @@ and now merely a zombie for promoting STEM initiatives and thus a puppet of priv
 come with me and step down into our cave.
 
 ## Plato's cave
-![plato]({{"assets/ml_p1/plato.jpg" | absolute_url }}){:width="300em"}
+<p style="font-size:15px"><a href="https://commons.wikimedia.org/wiki/File:Platon.png#/media/File:Platon.png"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Platon.png" alt="Platon.png"></a>
+<br>By <a href="//commons.wikimedia.org/w/index.php?title=User:RaphaelQS&amp;action=edit&amp;redlink=1" class="new" title="User:RaphaelQS (page does not exist)">RaphaelQS</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=65546874">Link</a></p>
 
 Plato's allegory of the cave is roughly summarized as follows: A bunch of people
 are chained inside a cave and forced to watch shadow puppets dance on
@@ -41,17 +42,18 @@ For example, what is the relationship (if any) between senses
 $$X$$ and $$Y$$.
 
 ## Relations
-A **relation** is merely a subset of a cartesian product,
-$$R \subset X \times Y$$.
+Recall, a **relation** is a subset,
+$$R \subset X \times Y$$, which we can think of as a generalization of a function.
 A function $$f:X \to Y$$ is represented as a relation by its graph,
-$$\Gamma[f] := \{ (x,f(x)) \}_{x \in X}$$.
+$$\Gamma[f] := \{ (x,f(x)) \}_{x \in X}$$. In fact we can make this a functor $$\Gamma: \operatorname{Set} \to \operatorname{Rel}$$.
 
 At a high level we have two categories here, and one is a strict subcategory.
 The category $$\operatorname{Set}$$,
 where the objects are sets and the arrows are maps,
-and the category $$\operatorname{Rel} := \operatorname{Span}(\operatorname{Set})$$,
+and the category $$\operatorname{Rel}$$,
 where the objects are sets and the arrows are relations.
 
+Note that the embedding functor $$\Gamma$$, is not invertible.
 Generally speaking, an arbitrary
 relation is not the graph of a function... sad face emoji.
 In **supervised machine learning**
@@ -121,7 +123,9 @@ A stochastic relation from $$\rho_X \in \Pr(\Sigma_X)$$
 to $$\rho_Y \in \Pr(\Sigma_Y)$$ is an element
 $$\rho \in \Pr(\Sigma_X \otimes \Sigma_Y)$$
 whose marginals are $$\rho_X$$ and $$\rho_Y$$ respectively.
-We'll call this category $$\operatorname{ProbRel}$$.
+We'll call this category $$\operatorname{ProbRel}$$.[^span]
+
+[^span]:You can derive $$\operatorname{Rel}$$ as the image of $$\operatorname{span}(\operatorname{Set})$$ under the operation of projecting each span to its associated product.  Same goes for $$\operatorname{ProbRel}$$ with respect to $$\operatorname{Prob}$$.
 
 Just as there is a functor which embeds $$\operatorname{Set}$$ into
 $$\operatorname{Rel}$$, there is a functor, $$F$$,
@@ -191,7 +195,9 @@ So much for idealism.
 
 ## Empiricism
 
-![hume]({{"assets/ml_p1/hume.jpg" | absolute_url }}){:width="300em"}
+<p style="font-size:15px"><a href="https://commons.wikimedia.org/wiki/File:David_Hume_2.jpg#/media/File:David_Hume_2.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/2/20/David_Hume_2.jpg" alt="David Hume 2.jpg" height="480" width="396"></a><br>By <span class="fn value">
+<span lang="en">Unknown</span></span> - The original uploader was <a href="https://en.wikipedia.org/wiki/de:User:Odin" class="extiw" title="w:de:User:Odin">Odin</a> at <a href="https://en.wikipedia.org/wiki/de:" class="extiw" title="w:de:">German Wikipedia</a>.(<span lang="en">Original text: Scottish National Portrait Gallery, Edinburgh</span>)
+Later version(s) were uploaded by <a href="https://de.wikipedia.org/wiki/User:Ekuah" class="extiw" title="de:User:Ekuah">Ekuah</a> at <a class="external text" href="http://de.wikipedia.org">de.wikipedia</a>., Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=11342003">Link</a></p>
 
 We might not know $$\rho$$, but we do have a labeled dataset, $$\mathcal{D}$$ sampled
 from $$\rho$$.  We should be able to approximate $$\rho$$ using the distribution
@@ -215,7 +221,7 @@ So we're done right?
 ## Critique on Pure Reason
 The empiricist approach *Kant* work.
 
-![kant]({{"assets/ml_p1/kant.jpeg" | absolute_url }}){:width="300em"}
+<p style="font-size:15px"><a href="https://commons.wikimedia.org/wiki/File:Immanuel_Kant_(painted_portrait).jpg#/media/File:Immanuel_Kant_(painted_portrait).jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Immanuel_Kant_%28painted_portrait%29.jpg" alt="Immanuel Kant" height="480" width="333"></a><br>By <a href="//commons.wikimedia.org/wiki/Category:18th-century_portrait_paintings_of_men,_artist_and_location_missing" title="Category:18th-century portrait paintings of men, artist and location missing">Unidentified painter</a> - /History/Carnegie/kant/portrait.html, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=897016">Link</a></p>
 
 I'm so punny. Feel free to take a moment, and allow yourself to stop laughing.
 
@@ -324,7 +330,7 @@ Once we have a dataset $$\mathcal{D}$$, we can start to construct $$M$$.
 First, consider the logistic function $$\operatorname{logit}(x) = \frac{\exp(x)}{1+\exp{x}}$$.
 This function has the graph depicted below.
 
-<p><a href="https://commons.wikimedia.org/wiki/File:Logistic-curve.svg#/media/File:Logistic-curve.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Logistic-curve.svg/1200px-Logistic-curve.svg.png" alt="Logistic-curve.svg"></a><br>By <a href="//commons.wikimedia.org/wiki/User:Qef" title="User:Qef">Qef</a> (<a href="//commons.wikimedia.org/wiki/User_talk:Qef" title="User talk:Qef">talk</a>) - Created from scratch with gnuplot, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=4310325">Link</a></p>
+<p style="font-size:10px"><a href="https://commons.wikimedia.org/wiki/File:Logistic-curve.svg#/media/File:Logistic-curve.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg" alt="Logistic-curve.svg" height="290" width="436"></a><br>By <a href="//commons.wikimedia.org/wiki/User:Qef" title="User:Qef">Qef</a> (<a href="//commons.wikimedia.org/wiki/User_talk:Qef" title="User talk:Qef">talk</a>) - Created from scratch with gnuplot, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=4310325">Link</a></p>
 
 The primary reason this is a useful function is because it maps $$\mathbb{R}$$ to
 $$[0,1] \cong \Pr(\Sigma_2)$$. Now we just need a map from

@@ -1,0 +1,4 @@
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0QBfKkGKAObwioAGYAnCAFskZEDgizq9Zq0RgmDBtQZ0ARjAYAFTLnyFEIBjFE4QOiBDREAnGVGM4MCjy5A
+\begin{tikzcd}
+X \arrow[loop, distance=2em, in=35, out=325]
+\end{tikzcd}

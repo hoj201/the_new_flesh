@@ -1,0 +1,6 @@
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAB12BxOgW17oAKTmgAWWAJQgAvqXSZc+QigCM5KrUYs2nATlEAjA8ABK0mXJAZseAkTIqN9Zq0Qd2e0QGNGwAELmsvI2SkRqjtTO2m4AGhbBinYoZABMTlquIHHSGjBQAObwRKAAZgBOELxIZCA4EEgpkRlIYEwMDNQMdAYwDAAKCrbKIAwwJTjxIOWV1dR1SADMTS4tbR0j3b0DIUkjYxNBUxVViDXziGqaK25lIJ2b-YOhbqPjk9MnjbX1iEtX0e4xFg7hseo8dsNXhNqHBxG9TocPg05j8ACzLAGcHB0Jggrpg7aJSH7EGiGB0KBsHAAdwgZIpCBy0iAA
+\begin{tikzcd}
+\Gamma(\phi) \arrow[d] \arrow[rd] \arrow[r, "r"]           & \mathbb{R} \\
+\mathcal{B} \arrow[r, "\phi"] \arrow[d, "\tau", two heads] & X          \\
+X                                                          &           
+\end{tikzcd}

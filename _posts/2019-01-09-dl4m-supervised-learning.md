@@ -2,7 +2,7 @@
 title: Supervised machine learning for pure mathematicians
 subtitle: Deep Learning for Mathematicians part I
 layout: post
-tags: math, philosophy
+tags: math
 ---
 
 My own journey from academia to data-science was hard and annoying.

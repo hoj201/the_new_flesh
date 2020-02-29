@@ -3,9 +3,21 @@ layout: default
 ---
 <article class="container px-2 mx-auto mb4" itemscope itemtype="http://schema.org/BlogPosting">
   <h1 class="h0 col-20 sm-width-full py-4 mt-3 inline-block" itemprop="name headline">{{ page.title }}</h1>
-  <h2>{{ page.author }}</h2>
+  <h2>Henry O. Jacobs</h2>
   <div class="col-4 sm-width-full mt-1 border-top-thin ">
     <p class="mb-3 py-2 bold h4"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+    <div class="post-tags">
+      Tags:
+      {% if post %}
+        {% assign tags = post.tags %}
+      {% else %}
+        {% assign tags = page.tags %}
+      {% endif %}
+      {% for tag in tags %}
+      <a href="{{site.baseurl}}/tags/#{{tag|slugize}}">{{tag}}</a>
+      {% unless forloop.last %}&nbsp;{% endunless %}
+      {% endfor %}
+    </div>
   </div>
 
   <div class="prose" itemprop="articleBody">

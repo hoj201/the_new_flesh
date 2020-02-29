@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Categorification of Markov Decision Processes
+tags: math
 ---
 In earlier posts I re-discovered the category of stochastic relations. To me this is a very useful category to get comfortable with if you're a machine learning practitioner with a taste for mathematical abstraction. In this post we will see how this category, literally, reduces the definition of markov decision processes to cartoon sketches of arrows and dots.
 

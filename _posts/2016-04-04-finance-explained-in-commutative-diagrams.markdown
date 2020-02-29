@@ -7,7 +7,7 @@ link: https://hoj201.wordpress.com/2016/04/03/finance-explained-in-commutative-d
 slug: finance-explained-in-commutative-diagrams
 title: Finance explained in commutative diagrams
 wordpress_id: 924
-tags: math economics
+tags: [math, economics]
 ---
 
 ## Preface

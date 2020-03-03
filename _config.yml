@@ -19,9 +19,9 @@ description: >- # this means to ignore newlines until "baseurl:"
     Our reality is already half video hallucination. If you're not careful, it will become total hallucination. - Professor Brian O'Blivion, "Videodrome" (1983)
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.thenewflesh.net" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: flesh_new
-instagram_username: max__renn
-github_username:  hoj201
+# twitter_username: flesh_new
+# instagram_username: max__renn
+# github_username:  hoj201
 
 # Build settings
 markdown: kramdown

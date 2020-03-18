@@ -36,7 +36,7 @@ These structures are made by taking a formula (in this case $$z^2 + c$$) and app
 In theory, the market should be serving its constituents.  However, the reverse is occurring.
 
 ## Wag the dog
-> a dog is smarter than its tail, but if the tail were smarter, then the tail would wag the dog (Theidioms.com)
+> a dog is smarter than its tail, but if the tail were smarter, then the tail would wag the dog
 
 How is it that the masters have become the slaves of the market. The computational scientist in me is attracted to market solutions because they are human-powered Monte-Carlo algorithms. Briefly, a Monte-Carlo algorithm is an optimization algorithm that can roughly be summarized as "do a bunch of random things, something will work out". It's a method that was developed by Stanislaw Ulam and implemented on the ENIAC in the 1940s by Jon Von Neumann for computing numerical solutions to problems in thermodynamics. It's a very flexible method that often works, and so it was applied everywhere in sight. Intuitively, that's the beginning and end of the story. Market solutions are a similar sort of algorithm, also easy to apply, and so they are applied frequently.
 

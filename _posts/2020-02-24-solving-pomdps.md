@@ -24,14 +24,12 @@ $$
 It's a short post and [you should read it before reading this one]({{ site.baseurl}}{% post_url 2020-02-12-algebra-of-POMDPs %}).
 
 ## Taking the "Hidden" out of Hidden Markov Models
-Before diving into POMDPs, lets study their actionless cousing, Hidden Markov Models. In this section we will construct a faithful functor $$F_{-H}:\mathrm{HMM} \to \mathrm{MM}$$ which sends a Hidden Markov model over a state space $$X$$ into a Markov model over a (continuous) state space $$\tilde{X}$$. Faithfulness has the tangible consequence that the insights on the Markov model provide insights into the corresponding hidden Markov model.
+Before diving into POMDPs, lets study their uncontrolled cousin, Hidden Markov Models. In this section we will construct a faithful functor $$F_{-H}:\mathrm{HMM} \to \mathrm{MM}$$ which sends a Hidden Markov model over a state space $$X$$ into a Markov model over a (continuous) state space $$\tilde{X}$$.  Faithfulness has the tangible consequence that the insights on the Markov model provide insights into the corresponding hidden Markov model.
 
-### Baby example
-Before diving into the abstraction, it's useful to do a concrete example. At the very least, this allays fears that all the abstraction is vacuous under the hood.
+### A fundamental example
+Let's consider a simple HMM where the state space is $$X = \{0,1\}$$ and the observation, $$y:\{0,1\} \to \{0,1\}$$, is a random variable that tells you the correct state with probability $$p > 0.5$$, i.e. $$\Pr(y=x \mid x) = p$$. We can represent priors over $$X$$ as 2-vectors, $$(u, 1-u)$$ for $$u \in [0,1]$$, and the transition kernel $$\phi$$ as a $$2 \times 2$$ Markov matrix.
 
-Let's consider a simple HMM where the state space is $$X = \{0,1\}$$ and the observation $$y$$ is a random variable that tells you the correct state with probability $$p > 0.5$$, i.e. $$\Pr(y=x) = p$$. We can represent priors over $$X$$ as 2-vectors, and the transition kernel $$\phi$$ as a $$2 \times 2$$ Markov matrix.
-
-  Given a sequence of observations can you can not infer the hidden sequence states exactly.  However, you can make a probabilistic inference.  Without any knowledge or measurement, at $$t=0$$, your prior over $$X$$ ought to maximize entropy, thus we assume a uniform prio $$\rho_0^- = (0.5, 0.5)$$. After your first measurement, $$\hat{y}_0 = 0$$ you might update this to $$\rho_0 = (p, 1-p)$$. Then the transition kernel can be applied to this prior to get $$\rho_1^- = \phi \cdot \rho_0 = (\rho_1^-[0], \rho_1^-[1])$$.  After your next measurement $$\hat{y}_1 = 1$$, you can again do a Bayesian update to get 
+  Given a sequence of observations can you can not infer the hidden sequence states exactly.  However, you can make a probabilistic inference.  Without any knowledge or measurement, at $$t=0$$, your prior over $$X$$ ought to maximize entropy, thus we assume a uniform prior, $$\rho_0^- = (0.5, 0.5)$$. After your first measurement, $$\hat{y}_0 = 0$$ you might update this to $$\rho_0 = (p, 1-p)$$. Then the transition kernel can be applied to this prior to get $$\rho_1^- = \phi \cdot \rho_0 = (\rho_1^-[0], \rho_1^-[1])$$.  After your next measurement $$\hat{y}_1 = 1$$, you can again do a Bayesian update to get 
 
 $$
  \rho_1 = \frac{1}{Z_1} (1-p \rho_1^-(0), p \rho_1^-[1])
@@ -99,28 +97,55 @@ God damn you NSF-funded-sharks!!! Fine, incidentally, it might be, so I'll throw
 Explicitly, $$\tilde{\rho}$$ is a distribution over $$\tilde{X}$$.  Therefore the steady state behavior of the original hidden markov model is that the observation $$\hat{y}$$ is taken by drawing a sample $$(\hat{y}, \rho) \sim \tilde{\rho}$$.  The steady state behavior of the state is generally not observed, but instead the steady-state behavior of the beliefs of the current states is observed, and corresponds to $$\rho \in \Pr(X)$$.
 
 ### Are you sure?  It looks useless?
-Yeah, I know! Would you shut up?
+Admittedly, $$F_{-H}$$ is not a panacea. The resulting Markov model is over a **continuous state space**. If the original hidden Markov model has $$N$$ states, then the corresponding Markov model is over an $$N-1$$ simplex.  
 
-I'll admit $$F_{-H}$$ is not a panacea. The resulting Markov model is over a **continuous state space**. If the original hidden markov model has finitely many states, this is a substantial bump in dimensionality.  
+A similar trade-off occurs when vieweing a non-linear stochastic differential equation on $$\mathbb{R}^n$$ as a deterministic linear ODE over $$L^1( \mathbb{R}^n)$$ by considering the Fokker-Planck equation. You could argue that this transition is useless and buys us nothing because it is "merely a change in perspective".  However, you would lose that argument. Such a sentiment is short-sighted and not supported by evidence. It's undeniable that the Fokker-Planck equation was useful in the study of SDEs. Mathematicians would have been impotent without the Fokker-Planck equation and the field of SDEs would have died on the operating table momentarily after birth. Our toolkit for linear operators is miles ahead of our toolkit for stochastic/nonlinear things, and it's been this way forever. Similarly, our toolkit for Markov processes is miles ahead of toolkit for hidden Markov models.
 
-A similar trade-off occurs when vieweing a non-linear stochastic differential equation on $$\mathbb{R}^n$$ as a linear (deterministic) ODE over $$L^1( \mathbb{R}^n)$$ by considering the Fokker-Planck equation. You could argue that this transition is useless and buys us nothing because it is "merely a change in perspective".  However, you would lose that argument. Such a sentiment is short-sighted and not supported by evidence. It's undeniable that the Fokker-Planck equation was useful in the study of SDEs. Mathematicians would have been impotent without the Fokker-Planck equation and the field of SDEs would have died just after birth. Our toolkit for linear operators is miles ahead of our toolkit for stochastic/nonlinear things, and it's been this way forever.
-
-### Seriously, it looks useless
-Fine. Here's a more down to earth application (minus the gnitty-gritty). If $$F$$ were leveraged in an engineering application, it would probably be used in some numerical method. In that case, some sort of analytic assumption would need to be adopted or derived so that approximations of $$\tilde{\phi}$$ would be valid. For example, viewing $$\tilde{\phi}$$ as a linear operator on the space of measures, we could assume (or prove in special cases) that the specta of $$\tilde{\phi}$$ consists of $$H^k$$ subspaces. This would allow us to spectrally approximate $$\tilde{\phi}$$ as a $$n \times n$$ matrix, and we'd achieve a $$\mathcal{O}(t \cdot n^{-k})$$-ish error bound in time $$t$$. In fact, [the last thing I did before leaving the academy](https://arxiv.org/abs/1412.8369) was a building a spectral scheme like this, so this application is nearly a freebie in my mind.
+### A concrete insite
+If $$F$$ were leveraged in an engineering application, it would probably be used in some numerical method. In that case, some sort of analytic assumption would need to be adopted or derived so that approximations of $$\tilde{\phi}$$ would be valid. For example, viewing $$\tilde{\phi}$$ as a linear operator on the space of measures, we could assume (or prove in special cases) that the specta of $$\tilde{\phi}$$ consists of $$H^k$$ subspaces. This would allow us to spectrally approximate $$\tilde{\phi}$$ as a $$n \times n$$ matrix, and we'd achieve a $$\mathcal{O}(t \cdot n^{-k})$$-ish error bound in time $$t$$. In fact, [the last thing I did before leaving the academy](https://arxiv.org/abs/1412.8369) was a building a spectral scheme like this, so this application is nearly a freebie in my mind.
 
 ### blah blah blah... useless
 Allow me to direct you to somewhere more worthy of your time. [Click here](http://www.nickjr.com/paw-patrol/)
 
 ### Functorality
-That link should distract the trolls for at least 30 minutes. We can get serious now.
+That link should distract the trolls for 30 minutes. We can get serious now.
 
-So far we've only given the object map of $$F_{-H}$$. Let's consider an $$\mathrm{HMM}$$ morphism $$\alpha \in \mathrm{HMM}((\phi, y) ,\, (\phi', y'))$$ consists of two morphisms, $$\alpha_X:X \to X'$$ and $$\alpha_Y:Y \to Y'$$, where $$\alpha_X \circ \phi = \phi' \circ \alpha_X$$ and $$\alpha_Y \circ y = y' \circ \alpha_X$$. The morphism $$F(\alpha) \in \mathrm{MM}(\tilde{\phi}, \tilde{\phi}')$$, is really just a morphism $$\beta:\tilde{X} \to \tilde{X}'$$ such that $$\beta \circ \tilde{\phi} = \tilde{\phi}' \circ \beta$$. Recalling that $$\tilde{X} \subset \Pr(X) \times Y$$ it's pretty easy to guess that
+So far we've only given the object map of $$F_{-H}$$. Let's consider an $$\mathrm{HMM}$$ morphism $$\alpha \in \mathrm{HMM}((\phi, y) ,\, (\phi', y'))$$ consists of two morphisms, $$\alpha_X:X \to X'$$ and $$\alpha_Y:Y \to Y'$$, where $$\alpha_X \circ \phi = \phi' \circ \alpha_X$$ and $$\alpha_Y \circ y = y' \circ \alpha_X$$. In otherwords, the following diagrams commute:
+
+$$
+\require{AMScd}
+\begin{CD}
+X @>\alpha_X >> X'\\
+@VV \phi V @VV \phi V\\
+X @> \alpha_X >> X'
+\end{CD} \quad
+\begin{CD}
+X @>\alpha_X >> X'\\
+@VV y V @VV y' V\\
+Y @> \alpha_Y >> Y'
+\end{CD}.
+$$
+
+
+ The morphism $$F(\alpha) \in \mathrm{MM}(\tilde{\phi}, \tilde{\phi}')$$, is really just a morphism $$\beta:\tilde{X} \to \tilde{X}'$$ such that $$\beta \circ \tilde{\phi} = \tilde{\phi}' \circ \beta$$. Recalling that $$\tilde{X} \subset \Pr(X) \times Y$$ it's pretty easy to guess that
 
 $$
 	F(\alpha) = \left. \left( \Pr(\alpha_X) \times \alpha_Y \right) \right|_{\tilde{X}}
 $$
 
-and if that's your guess, then good job.
+and if that's your guess, then good job, you've made the diagram
+
+$$
+\require{AMScd}
+\begin{CD}
+\tilde{X} @> F(\alpha) >> \tilde{X}'\\
+@VV \phi V @VV \phi V\\
+\tilde{X} @> F(\alpha) >> \tilde{X}'
+\end{CD}
+$$
+
+commute!
+
 
 ## Taking the $$\mathrm{PO}$$ out of $$\mathrm{POMDP}$$
 In this section we construct a faithful functor $$F_{-PO}:\mathrm{POMDP} \to \mathrm{MDP}$$. We bascially will use the same trick that we used to transform HMMs into MMs. If you understood the functor $$F_{-H}$$ then this section should be a cake-walk.
@@ -249,11 +274,28 @@ $$
 	\end{Bmatrix}
 $$
 
+** draw communcative squares**
+
 ### How is this useful?
+Solving the MDPs given by the functor $$F_{-PO}$$ amounts to solving the corresponding POMDP. In particular, say
 
-**ELABORATE HERE**
+$$
+	F_{-PO}: \begin{Bmatrix} 
+		\tau: \mathcal{A} \twoheadrightarrow Y \\
+		y:X \to Y \\
+		\phi: X \times_Y \mathcal{A} \to X \\
+		r: \Gamma(\phi) \to X 
+	\end{Bmatrix} \in \mathrm{POMDP}
+	\mapsto
+	\begin{Bmatrix} 
+		\tilde{\tau}: \mathcal{A} \times_Y \tilde{X} \twoheadrightarrow \tilde{X} \\
+		\tilde{\phi}: \mathcal{A} \times_Y \tilde{X} \to \tilde{X} \\
+		\tilde{r}: \Gamma(\tilde{\phi}) \to \mathbb{R} 
+	\end{Bmatrix} \in \mathrm{MDP}.
+$$
 
-Solving the MDPs given by the functor $$F_{-PO}$$ amounts to solving the corresponding POMDP. In particular
+Then we can solve the MDP $$(\tilde{\tau}, \tilde{\phi}, \tilde{r})$$, which means obtaining a policy $$\tilde{\pi}: \tilde{X} \to \mathcal{A} \times_Y \tilde{X}$$, which maximizes the expected cumulative reward.  This policy is perfectly feasible to execute, as we observe a deterministic reading of $$\tilde{X}$$ after each observation, and the reading incorporates  
+
 
 > Given a POMDP $$(\tau, y, \phi, r)$$ and a prior $$\rho_0 \in \Pr(X)$$ over the state space, solving $$F_{-PO}(\tau, y, \phi, r)$$ produces a policy that optimizes the expected cumulative reward of the original POMDP using only observable entities.
 
